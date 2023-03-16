@@ -1,0 +1,29 @@
+Clean up Xcode cache files on your Mac
+less than 1 minute read
+There is no side effect. I got 100Gb!
+Target: unused device
+Permalink
+* Path: ~/Library/Developer/CoreSimulator/Devices
+    * How: execute command on terminal xcrun simctl delete unavailable
+* Path: ~/Library/Developer/Xcode/iOS DeviceSupport
+    * How: delete directorys like ‘9.0.0’
+Target: unnecessary files
+Permalink
+* Path: ~/Library/Developer/CoreSimulator/Caches/dyld/..
+    * How: delete each directory
+Target: builded App caches
+Permalink
+* Path: ~/Library/Developer/Xcode/DerivedData
+    * How: delete each directory
+Target: unnecessary Archives
+Permalink
+* Path: ~/Library/Developer/Xcode/Archives
+    * How: delete each directory
+Target: logs
+Permalink
+* Path: ~/Library/Developer/Xcode/iOS Device Logs
+    * How: delete each directory
+Target: Other unnecessary files
+Permalink
+* Path: ~/Library/Caches/..
+    * How: delete each directory
