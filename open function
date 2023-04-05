@@ -1,0 +1,29 @@
+Question:
+The function fopen(FILE *fp) in XCode it's not working, I put the text file in the root directory, but not work, it's weird because, executing from terminal works fine, but executing from IDE not.
+
+The sintax that I use it's this:
+
+FILE *fp=fopen("name.txt", "r");
+if(fp==NULL)
+{
+    printf("the text file can't be opened");
+    exit(0);
+}
+else
+    return fp;
+
+And always return NULL.
+
+
+Answer:
+well what's the working directory when run via xcode?
+by default IIRC it isnt set and that might be the difference between IDE and terminal.
+
+-- set the working dir:
+
+go to: product > scheme > edit scheme...
+
+there go to:
+options tab and choose a working directory
+
+Source:https://stackoverflow.com/questions/13531331/fopen-not-work-with-xcode
